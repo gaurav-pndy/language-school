@@ -1,5 +1,6 @@
 import Admissions from "@/components/Admissions";
 import BlogNews from "@/components/BlogNews";
+import Contact from "@/components/Contact";
 import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
 import LearningResources from "@/components/LearningResources";
@@ -11,7 +12,6 @@ import Teachers from "@/components/Teachers";
 import VisaGuide from "@/components/VisaGuide";
 import WhyChoose from "@/components/WhyChoose";
 
-// app/page.js
 export default function HomePage() {
   return (
     <div>
@@ -27,6 +27,7 @@ export default function HomePage() {
       <LearningResources />
       <BlogNews />
       <FAQ />
+      <Contact />
     </div>
   );
 }
