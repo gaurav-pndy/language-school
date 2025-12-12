@@ -1,0 +1,162 @@
+{
+  "nav": {
+    "about": "About",
+    "programs": "Programs",
+    "teachers": "Teachers",
+    "admissions": "Admissions",
+    "contact": "Contact",
+    "menu": "Menu",
+    "documents": "Documents Menu",
+    "applyNow": "Apply Now"
+  },
+  "header": {
+    "brand": "RusLanguage"
+  },
+  "documents": {
+    "title": " Licenses and Permits",
+    "subtitle": " Documents confirming the right to carry out medical activities"
+  },
+  "hero": {
+    "title": "Become Russian with us and join our community!",
+    "subtitle": "Start your Russian journey with us in Moscow, where you’ll find certified, tailored programs that immerse you in the language and culture, and empower you to enter the workforce with confidence.",
+    "ctaApply": "Apply Now"
+  },
+  "programs": {
+    "title": "Our Programs",
+    "subtitle": "Choose the course that fits your goals and schedule",
+    "sixMonthTitle": "6 Month Course",
+    "sixMonthPrice": "5 700₽",
+    "sixMonthPerMonth": "/ month",
+    "sixMonthProgramTitle": "Program",
+    "sixMonthBullets": [
+      "Access to all core Russian language modules for 6 months.",
+      "Weekly live speaking practice with certified teachers.",
+      "Homework review and personal feedback.",
+      "Interactive platform with exercises and progress tracking.",
+      "Exam preparation materials for TORFL / TRKI.",
+      "Community chat and support from mentors."
+    ],
+    "applyNow": "Apply Now"
+  },
+  "applyForm": {
+    "title": "Request Information",
+    "subtitle": "Fill out the form and we'll get back to you within 24 hours",
+    "fullName": "Full Name",
+    "email": "Email",
+    "country": "Country",
+    "interestedIn": "Interested In",
+    "message": "Message",
+    "namePlaceholder": "Your name",
+    "emailPlaceholder": "your@email.com",
+    "countryPlaceholder": "Your country",
+    "messagePlaceholder": "Tell us about your goals...",
+    "selectProgram": "Select a program",
+    "programs": {
+      "intensive": "Intensive Russian",
+      "evening": "Evening Classes",
+      "online": "Online Russian",
+      "private": "Private Lessons",
+      "school": "Summer School"
+    },
+    "sendRequest": "Send Request"
+  },
+    "courseStructure": {
+    "title": "Course Structure",
+    "description": "This intensive course runs from February to July (6 months) and takes you from A0 to A2. It includes 15 hours of classes per week, held four times a week. Each day consists of 3 periods, with each period lasting 1 hour 20 minutes."
+  },
+  "whyUs": {
+    "title": "Why Us?",
+    "points": [
+      "Personalized Russian program: Tailored to your goals, schedule, and profession, with small groups that ensure every student receives attention and feedback.",
+      "Supportive international community: Connect with peers and access guidance from experienced experts.",
+      "Professional connections: Benefit from strong links with the Russian medical field and other professional networks.",
+      "Practical language skills: Learn Russian for study, work, and everyday life, not just theory."
+    ]
+  },
+
+   "testimonials": {
+    "title": "Student Success Stories",
+    "subtitle": "Hear from our international students",
+    "empty": "Testimonials will appear here soon.",
+    "learnMore": "Learn more"
+  },
+  
+  "admissions": {
+    "title": "Admissions & Registration",
+    "subtitle": "Simple enrollment process — start learning Russian in 3 clear steps",
+    "steps": {
+      "choose": {
+        "title": "Choose Your Course",
+        "points": [
+          "Browse our programs and select the course that matches your goals and schedule."
+        ]
+      },
+      "form": {
+        "title": "Complete the Application Form",
+        "points": [
+          "Fill out our application form with your personal and educational information.",
+          "This helps us choose the most suitable program for you and align it with your selected course."
+        ]
+      },
+      "test": {
+        "title": "Free Placement Test",
+        "points": [
+          "Take our online placement test to determine your current Russian level (A0–B1).",
+          "After completing the test, you will see: “Thank you for taking our test. Your placement level is ___. We suggest you take our paid consultation to accurately confirm this level.”",
+          "Final confirmation of your level after completing both steps is mandatory."
+        ]
+      }
+    }
+  },
+   "address": {
+    "title": "Our Location",
+    "addressTitle": "Address",
+    "clinicName": "RusLanguage",
+    "fullAddress": "Volokolamskoye Highway, 1, Building 1, Office 606C, Moscow, Russian Federation – 125 080",
+    "phoneTitle": "Phone",
+    "phoneDisplay": "+1 (234) 567-89-00"
+  },
+  
+  "contactForm": {
+    "title": "Contact Us",
+    "subtitle": "Have questions about our Russian programs or admissions? Send us a message and we'll get back to you shortly.",
+    "lastName": "Last name",
+    "firstName": "First name",
+    "middleName": "Patronymic",
+    "email": "Email",
+    "phone": "Phone",
+    "message": "Message",
+    "messagePlaceholder": "Tell us about your goals, preferred dates, or questions...",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "max": "Max",
+    "send": "Send message"
+  },
+
+  "footer": {
+    "navigation": "Fast Links",
+    "legalDocs": "Legal Documents",
+    "contact": "Contact",
+    "addressLabel": "Address",
+    "emailLabel": "Email",
+    "phoneLabel": "Phone / WhatsApp",
+    "hoursLabel": "Opening Hours",
+    "address": "Volokolamskoye Highway, 1, Building 1, Office 606C, Moscow, Russian Federation, 125 080",
+    "email": "info@ruslanguage.ru",
+    "phone": "+7 (XXX) XXX-XX-XX",
+    "hours": {
+      "monFri": "Mon–Fri: 9:00 – 19:00",
+      "sat": "Sat: 10:00 – 16:00",
+      "sun": "Sun: Closed"
+    },
+    "copyright": "© RusLanguage School. All rights reserved."
+  },
+
+  "floatingCta": {
+    "text": "Our next intensive course begins on 03.03.2026. Reserve your place today.",
+    "apply": "Apply now",
+    "contact": "Contact us"
+  }
+
+
+}

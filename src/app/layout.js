@@ -2,6 +2,8 @@
 import Header from "@/components/Header";
 import "./globals.css"; // import Tailwind/global styles
 import Footer from "@/components/Footer";
+import "@/utils/i18n";
+import FloatingCta from "@/components/FloatingCta";
 
 export const metadata = {
   title: "RusLanguage",
@@ -16,6 +18,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="mt-18">{children}</main>
         <Footer />
+        <FloatingCta />
       </body>
     </html>
   );

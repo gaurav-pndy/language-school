@@ -1,6 +1,10 @@
+import Address from "@/components/Address";
 import Admissions from "@/components/Admissions";
 import BlogNews from "@/components/BlogNews";
 import Contact from "@/components/Contact";
+import ContactUs from "@/components/ContactUs";
+
+import CourseStructure from "@/components/CourseStructure";
 import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
 import LearningResources from "@/components/LearningResources";
@@ -16,18 +20,22 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
-      <WhyChoose />
+
       <Programs />
+      <CourseStructure />
+      <WhyChoose />
       <Teachers />
-      <StudentServices />
       <SuccessStories />
+      {/* <StudentServices /> */}
+
       <Admissions />
-      <VisaGuide />
-      <LivingInRussia />
-      <LearningResources />
-      <BlogNews />
       <FAQ />
-      <Contact />
+      <Address />
+      <ContactUs />
+      {/* <VisaGuide /> */}
+      {/* <LivingInRussia /> */}
+      {/* <LearningResources /> */}
+      {/* <BlogNews /> */}
     </div>
   );
 }

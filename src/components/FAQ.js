@@ -6,6 +6,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
+    q: "Can I work while studying in Moscow?",
+    a: "International students on a student visa can work part-time (up to 20 hours/week) with proper work authorization. We can advise you on the legal requirements and help with paperwork if needed.",
+  },
+  {
+    q: "What is the cost of living in Moscow?",
+    a: "Moscow living costs range from €400-800/month depending on lifestyle. This includes accommodation, food, transport, and entertainment. Russia is generally more affordable than Western Europe or North America.",
+  },
+  {
     q: "How do I apply to the school?",
     a: "Simply fill out our online application form, take the free placement test, and schedule a consultation with our admissions team. We'll guide you through the entire enrollment process.",
   },
@@ -21,14 +29,7 @@ const faqs = [
     q: "What accommodation options are available?",
     a: "We offer three main options: student dormitory (shared or private rooms), host family placement for cultural immersion, or assistance finding a private apartment. All options are within 20 minutes of the school.",
   },
-  {
-    q: "Can I work while studying in Russia?",
-    a: "International students on a student visa can work part-time (up to 20 hours/week) with proper work authorization. We can advise you on the legal requirements and help with paperwork if needed.",
-  },
-  {
-    q: "What is the cost of living in Russia?",
-    a: "Moscow living costs range from €400-800/month depending on lifestyle. This includes accommodation, food, transport, and entertainment. Russia is generally more affordable than Western Europe or North America.",
-  },
+
   {
     q: "Is health insurance required?",
     a: "Yes, medical insurance valid in Russia is mandatory for obtaining a student visa. We can recommend affordable insurance providers that meet Russian requirements.",
