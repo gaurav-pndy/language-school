@@ -1,2 +1,8 @@
 @import "tailwindcss";
 
+.apply-form-phone .react-international-phone-country-selector-button{
+    border-bottom-left-radius: 0.75rem !important;
+
+    border-top-left-radius: 0.75rem !important;
+    height: 100% !important;
+}

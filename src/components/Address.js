@@ -136,12 +136,11 @@ const Address = () => {
             <div className="flex items-start text-left gap-2 text-black text-lg mb-1">
               <FaMapMarkerAlt className="mt-1.5 text-[#274268]" />
               <div>
-                <h4 className="font-medium base-text">
-                  {t("address.clinicName")}
-                </h4>
-                <p className="text-[#274268] small-text">
-                  {t("address.fullAddress")}
-                </p>
+                <h4 className="font-medium ">{t("address.clinicName")}</h4>
+                <p
+                  className="text-[#274268] "
+                  dangerouslySetInnerHTML={{ __html: t("address.fullAddress") }}
+                ></p>
               </div>
             </div>
 

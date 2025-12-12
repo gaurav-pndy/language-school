@@ -1,29 +1,55 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import "@/utils/i18n";
+import { PhoneInput } from "react-international-phone";
+import "react-international-phone/style.css";
+import Select from "react-select";
+import countryList from "react-select-country-list";
 
 export default function ApplyForm() {
+  const { t } = useTranslation();
+
   const [form, setForm] = useState({
-    name: "",
+    firstName: "",
+    middleName: "",
+    lastName: "",
     email: "",
+    phone: "",
+    whatsapp: false,
+    telegram: false,
+    max: false,
     country: "",
     program: "",
     message: "",
   });
 
-  const { t } = useTranslation();
+  const countryOptions = useMemo(
+    () =>
+      countryList()
+        .getData()
+        .map((c) => ({ value: c.label, label: c.label })),
+    []
+  );
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setForm((prev) => ({ ...prev, [name]: value }));
   };
 
+  const handleCheckboxChange = (name) => (e) => {
+    const { checked } = e.target;
+    setForm((prev) => ({ ...prev, [name]: checked }));
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted", form);
   };
+
+  const selectedCountry =
+    form.country && countryOptions.find((c) => c.value === form.country);
 
   return (
     <section id="contact">
@@ -39,16 +65,42 @@ export default function ApplyForm() {
           <form onSubmit={handleSubmit} className="space-y-5">
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
-                {t("applyForm.fullName")}
+                {t("contactForm.firstName")}
               </label>
               <input
                 type="text"
-                name="name"
-                value={form.name}
+                name="firstName"
+                value={form.firstName}
                 onChange={handleChange}
-                placeholder={t("applyForm.namePlaceholder")}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
                 required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">
+                {t("contactForm.lastName")}
+              </label>
+              <input
+                type="text"
+                name="lastName"
+                value={form.lastName}
+                onChange={handleChange}
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                required
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">
+                {t("contactForm.middleName")}
+              </label>
+              <input
+                type="text"
+                name="middleName"
+                value={form.middleName}
+                onChange={handleChange}
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
               />
             </div>
 
@@ -61,23 +113,79 @@ export default function ApplyForm() {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                placeholder={t("applyForm.emailPlaceholder")}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
                 required
               />
             </div>
 
+            <div className="apply-form-phone">
+              <label className="block font-semibold text-slate-800 mb-1">
+                {t("contactForm.phone")}
+              </label>
+              <PhoneInput
+                defaultCountry="ru"
+                value={form.phone}
+                onChange={(phone) => setForm((prev) => ({ ...prev, phone }))}
+                className="rounded-xl  border border-gray-300 bg-white w-full"
+                inputClassName="!bg-transparent !border-none !w-full !px-3 overflow-hidden! !py-5 focus:!outline-none "
+              />
+              <div className="mt-2 flex flex-wrap gap-4 text-xs text-slate-700">
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="accent-[#e45944]"
+                    checked={form.whatsapp}
+                    onChange={handleCheckboxChange("whatsapp")}
+                  />
+                  <span>{t("contactForm.whatsapp")}</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="accent-[#e45944]"
+                    checked={form.telegram}
+                    onChange={handleCheckboxChange("telegram")}
+                  />
+                  <span>{t("contactForm.telegram")}</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    className="accent-[#e45944]"
+                    checked={form.max}
+                    onChange={handleCheckboxChange("max")}
+                  />
+                  <span>{t("contactForm.max")}</span>
+                </label>
+              </div>
+            </div>
+
+            {/* Country dropdown using react-select-country-list */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("applyForm.country")}
               </label>
-              <input
-                type="text"
-                name="country"
-                value={form.country}
-                onChange={handleChange}
-                placeholder={t("applyForm.countryPlaceholder")}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              <Select
+                options={countryOptions}
+                value={selectedCountry || null}
+                onChange={(option) =>
+                  setForm((prev) => ({
+                    ...prev,
+                    country: option ? option.value : "",
+                  }))
+                }
+                placeholder={t("applyForm.selectCountry")}
+                className="text-sm"
+                styles={{
+                  control: (base) => ({
+                    ...base,
+                    borderRadius: 12,
+                    borderColor: "#d1d5db",
+                    minHeight: "2.5rem",
+                    boxShadow: "none",
+                    "&:hover": { borderColor: "#fb7185" },
+                  }),
+                }}
               />
             </div>
 
@@ -115,7 +223,6 @@ export default function ApplyForm() {
                 value={form.message}
                 onChange={handleChange}
                 rows={4}
-                placeholder={t("applyForm.messagePlaceholder")}
                 className="w-full rounded-xl border border-gray-300 px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-red-400"
               />
             </div>

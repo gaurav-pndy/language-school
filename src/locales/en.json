@@ -50,6 +50,7 @@
     "emailPlaceholder": "your@email.com",
     "countryPlaceholder": "Your country",
     "messagePlaceholder": "Tell us about your goals...",
+    "selectCountry": "Select your country",
     "selectProgram": "Select a program",
     "programs": {
       "intensive": "Intensive Russian",
@@ -78,7 +79,18 @@
     "title": "Student Success Stories",
     "subtitle": "Hear from our international students",
     "empty": "Testimonials will appear here soon.",
-    "learnMore": "Learn more"
+    "learnMore": "Learn more",
+    "items": {
+      "thevarasa-sabilshan": {
+        "name": "Thevarasa Sabilshan",
+        "country": "Sri Lanka",
+        "status": "Current student",
+        "program": "Russian for university studies and future",
+        "duration": "Studying with us for 1–3 months",
+        "studyTime": "Studies 2–3 hours a day",
+        "review": "The most useful part of the course for me is the speaking practice. The teachers are very friendly and helpful, and they explain new material clearly and at a comfortable pace. I always feel supported and relaxed during the lessons. For me the best method is active conversation, and the course keeps a good balance between speaking, grammar, vocabulary, listening and reading. I feel that my Russian has improved significantly in a short time."
+      }
+    }
   },
   
   "admissions": {
@@ -108,11 +120,61 @@
       }
     }
   },
+
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Quick answers to common questions about studying Russian with us",
+    "introTitle": "Got Questions?",
+    "introText": "Find answers below or contact us directly for personalized assistance.",
+    "items": [
+      {
+        "q": "Can I work while studying in Moscow?",
+        "a": "International students on a student visa can work part-time (up to 20 hours per week) with proper work authorization. We can advise you on the legal requirements and help with paperwork if needed."
+      },
+      {
+        "q": "What is the cost of living in Moscow?",
+        "a": "Living costs in Moscow typically range from €400–800 per month depending on your lifestyle. This usually covers accommodation, food, transport, and basic leisure."
+      },
+      {
+        "q": "How do I apply to the school?",
+        "a": "Fill out the online application form, complete the free placement test, and schedule a consultation with our admissions team. We guide you through every step of enrollment."
+      },
+      {
+        "q": "Do I need to know Russian before applying?",
+        "a": "No. We welcome complete beginners. Our programmes cover all levels from A1 to C2, and the placement test will determine your starting level."
+      },
+      {
+        "q": "How do I get a Russian student visa?",
+        "a": "After enrollment we issue an official invitation letter required for your visa application. You then apply at the nearest Russian consulate. The process usually takes 2–4 weeks, and we support you throughout."
+      },
+      {
+        "q": "What accommodation options are available?",
+        "a": "We offer student dormitories, host family options for cultural immersion, and assistance with finding private apartments, all within convenient distance of the school."
+      },
+      {
+        "q": "Is health insurance required?",
+        "a": "Yes, health insurance valid in Russia is mandatory for obtaining a student visa. We can recommend affordable policies that meet the requirements."
+      },
+      {
+        "q": "What happens if I miss classes?",
+        "a": "For intensive courses, missed lessons can often be made up in another group or through additional materials. For individual lessons, we can reschedule with advance notice."
+      },
+      {
+        "q": "Can I extend my course or change programmes?",
+        "a": "Yes. Many students extend their studies or switch programmes. We help you update the necessary documents and registration."
+      },
+      {
+        "q": "Do you offer online courses for students outside Russia?",
+        "a": "Yes. Our online Russian courses include live Zoom lessons with our teachers and access to the same learning platform as on-site students."
+      }
+    ]
+  },
+
    "address": {
     "title": "Our Location",
     "addressTitle": "Address",
     "clinicName": "RusLanguage",
-    "fullAddress": "Volokolamskoye Highway, 1, Building 1, Office 606C, Moscow, Russian Federation – 125 080",
+    "fullAddress": "Volokolamskoye Highway, 1, Building 1, Office 606C, Moscow, <br/>Russian Federation – 125 080",
     "phoneTitle": "Phone",
     "phoneDisplay": "+1 (234) 567-89-00"
   },
