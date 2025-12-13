@@ -124,7 +124,7 @@ const Address = () => {
   const [showPopup, setShowPopup] = useState(false);
 
   return (
-    <section id="contact" className="w-full bg-[#fafbfc] py-20">
+    <section id="contact" className="w-full bg-[#fafbfc] py-6">
       <div className="max-w-[87rem] text-center mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-10 text-slate-900">
           {t("address.title")}

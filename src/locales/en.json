@@ -6,7 +6,7 @@
     "admissions": "Admissions",
     "contact": "Contact",
     "menu": "Menu",
-    "documents": "Documents Menu",
+    "documents": "Documents",
     "applyNow": "Apply Now"
   },
   "header": {
@@ -38,6 +38,7 @@
     ],
     "applyNow": "Apply Now"
   },
+
   "applyForm": {
     "title": "Request Information",
     "subtitle": "Fill out the form and we'll get back to you within 24 hours",
@@ -53,11 +54,7 @@
     "selectCountry": "Select your country",
     "selectProgram": "Select a program",
     "programs": {
-      "intensive": "Intensive Russian",
-      "evening": "Evening Classes",
-      "online": "Online Russian",
-      "private": "Private Lessons",
-      "school": "Summer School"
+      "option1": "6 Month Course"
     },
     "sendRequest": "Send Request"
   },
@@ -72,6 +69,37 @@
       "Supportive international community: Connect with peers and access guidance from experienced experts.",
       "Professional connections: Benefit from strong links with the Russian medical field and other professional networks.",
       "Practical language skills: Learn Russian for study, work, and everyday life, not just theory."
+    ]
+  },
+  
+  "teachers": {
+    "title": "Meet Our Teachers",
+    "subtitle": "Experienced, certified instructors passionate about teaching Russian",
+    "list": [
+      {
+        "name": "Elena Petrova",
+        "role": "Lead Instructor",
+        "experience": "12 years of experience",
+        "bio": "PhD in Russian Philology. Specializes in intensive programs and exam preparation. Former lecturer at Moscow State University.",
+        "tags": ["Grammar", "TORFL Prep", "Academic Russian"],
+        "image": "/teachers/1.jpg"
+      },
+      {
+        "name": "Dmitri Sokolov",
+        "role": "Senior Teacher",
+        "experience": "15 years of experience",
+        "bio": "Master's in Russian Literature. Expert in conversation practice and cultural immersion. Published author on language pedagogy.",
+        "tags": ["Conversation", "Literature", "Business Russian"],
+        "image": "/teachers/2.jpg"
+      },
+      {
+        "name": "Anna Volkova",
+        "role": "Online Program Director",
+        "experience": "8 years of experience",
+        "bio": "Certified TEFL/TESOL instructor. Specializes in online teaching methodology and beginner-level instruction.",
+        "tags": ["Beginners", "Online Teaching", "Phonetics"],
+        "image": "/teachers/3.jpg"
+      }
     ]
   },
 

@@ -11,7 +11,7 @@ export default function WhyChoose() {
   const points = t("whyUs.points", { returnObjects: true });
 
   return (
-    <section className="bg-white py-20" id="why-us">
+    <section className="bg-white py-6" id="why-us">
       <div className="max-w-340 mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
           {/* Left: text and bullets */}

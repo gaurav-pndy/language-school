@@ -20,16 +20,27 @@ export default function FloatingCta() {
     const el = document.getElementById(hash);
     if (el) {
       // small timeout to wait for layout
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+
       setTimeout(() => {
-        el.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({
+          top,
+          behavior: "smooth",
+        });
       }, 100);
     }
   }, [pathname]);
-
-  const scrollOnHome = (sectionId) => {
+  const scrollOnHome = (sectionId, offset = 80) => {
     const section = document.getElementById(sectionId);
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const top =
+        section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
     }
   };
 

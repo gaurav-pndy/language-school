@@ -13,7 +13,7 @@ export default function FAQ() {
   const faqs = t("faq.items", { returnObjects: true });
 
   return (
-    <section id="faq" className="bg-white py-20">
+    <section id="faq" className="bg-white py-6">
       <div className="max-w-5xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">
           {t("faq.title")}

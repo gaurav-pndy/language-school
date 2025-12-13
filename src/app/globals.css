@@ -1,8 +1,56 @@
 @import "tailwindcss";
 
-.apply-form-phone .react-international-phone-country-selector-button{
-    border-bottom-left-radius: 0.75rem !important;
+.phone-input {
+  width: 100%;
+  border: 1px solid #d1d5db; /* gray-300 */
+  border-radius: 12px;
+  padding: 0.75rem 0.5rem;
+  /* background-color: rgb(213, 161, 161); */
+  display: flex;
+}
 
-    border-top-left-radius: 0.75rem !important;
-    height: 100% !important;
+.phone-input .PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  
+  padding-right: 4px;
+  border-right: 1px solid #e5e7eb; /* gray-200 */
+  margin-right: 4px;
+  /* background-color: #e45944; */
+
+}
+
+.phone-input .PhoneInputCountrySelect {
+  border-radius: 8px;
+  /* background-color: yellowgreen; */
+  cursor: pointer;
+  padding: 0% ;
+  width: 16px;
+  
+}
+
+.phone-input input {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  /* padding-left: 6px; */
+  outline: none !important;
+}
+
+.phone-input .PhoneInputCountryIcon {
+  width: 20px !important;
+  height: 16px !important;
+  object-fit: cover;
+  border-radius: 3px;
+
+}
+
+.phone-input .PhoneInputCountryIcon--square {
+  border-radius: 3px;
+  
+}
+
+.phone-input:focus-within {
+  border-color: #e45944;
+  box-shadow: 0 0 0 1px #e45944;
 }

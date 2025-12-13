@@ -14,7 +14,7 @@ export default function Programs() {
   const bullets = t("programs.sixMonthBullets", { returnObjects: true });
 
   return (
-    <section id="programs" className="bg-gray-50 py-20">
+    <section id="programs" className="bg-gray-50 py-6 pt-12">
       <div className="max-w-340 mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">
           {t("programs.title")}
@@ -24,7 +24,7 @@ export default function Programs() {
         </p>
 
         {/* 6 Month Course pricing block */}
-        <div className="mb-10 grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-6">
+        <div className=" grid grid-cols-1 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1.2fr)] gap-6">
           {/* Left card (price) */}
           <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8 flex flex-col justify-between">
             <div className="flex flex-col justify-between h-40">

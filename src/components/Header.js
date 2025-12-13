@@ -11,7 +11,7 @@ import "@/utils/i18n";
 import Link from "next/link";
 
 const navLinks = [
-  { key: "about", sectionId: "about" },
+  { key: "about", sectionId: "why-us" },
   { key: "programs", sectionId: "programs" },
   { key: "teachers", sectionId: "teachers" },
   { key: "admissions", sectionId: "admissions" },
@@ -48,17 +48,28 @@ export default function Header() {
     const el = document.getElementById(hash);
     if (el) {
       // small timeout to wait for layout
+      const top = el.getBoundingClientRect().top + window.pageYOffset - 80;
+
       setTimeout(() => {
-        el.scrollIntoView({ behavior: "smooth" });
+        window.scrollTo({
+          top,
+          behavior: "smooth",
+        });
       }, 100);
     }
   }, [pathname]);
 
-  const scrollOnHome = (sectionId) => {
+  const scrollOnHome = (sectionId, offset = 80) => {
     const section = document.getElementById(sectionId);
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-      setSidebarOpen(false);
+      const top =
+        section.getBoundingClientRect().top + window.pageYOffset - offset;
+
+      window.scrollTo({
+        top,
+        behavior: "smooth",
+      });
     }
   };
 

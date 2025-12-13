@@ -1,15 +1,19 @@
 // components/ContactUsSection.js
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { IoPaperPlaneOutline } from "react-icons/io5";
-import { PhoneInput } from "react-international-phone";
-import "react-international-phone/style.css";
+
 import { useTranslation } from "react-i18next";
 import "@/utils/i18n";
 
+import PhoneInput from "react-phone-number-input";
+
+import Select from "react-select";
+import countries from "@/utils/countryNames";
+
 export default function ContactUs() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [form, setForm] = useState({
     firstName: "",
@@ -23,6 +27,20 @@ export default function ContactUs() {
     message: "",
   });
 
+  const phoneLabels = useMemo(() => {
+    const lang = i18n.language === "ru" ? "ru" : "en";
+    const names = countries.getNames(lang, { select: "official" });
+
+    // react-phone-number-input expects a dictionary:
+    // { US: "United States", RU: "Россия", ... }
+    const dict = {};
+    Object.keys(names).forEach((code) => {
+      dict[code] = names[code];
+    });
+
+    return dict;
+  }, [i18n.language]);
+
   const handleChange = (field) => (value) => {
     setForm((prev) => ({ ...prev, [field]: value }));
   };
@@ -35,7 +53,7 @@ export default function ContactUs() {
   const Required = () => <span className="text-red-500 ml-1">*</span>;
 
   return (
-    <section id="contact-form" className="w-full bg-[#fafbfc] py-20">
+    <section id="contact-form" className="w-full bg-[#fafbfc] py-6 pb-12">
       <div className="max-w-4xl mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">
           {t("contactForm.title")}
@@ -109,13 +127,17 @@ export default function ContactUs() {
               {t("contactForm.phone")}
               <Required />
             </label>
-            <PhoneInput
-              defaultCountry="ru"
-              value={form.phone}
-              onChange={(phone) => handleChange("phone")(phone)}
-              className="rounded-lg border border-gray-300 bg-white w-full"
-              inputClassName="!bg-transparent !border-none !w-full !px-3 !py-2 focus:!outline-none"
-            />
+            <div className="phone-input-wrapper w-full">
+              <PhoneInput
+                international
+                defaultCountry="RU"
+                value={form.phone}
+                onChange={(phone) => setForm((prev) => ({ ...prev, phone }))}
+                labels={phoneLabels}
+                countryCallingCodeEditable={false}
+                className="phone-input"
+              />
+            </div>
             <div className="mt-2 flex flex-wrap gap-4 text-xs text-slate-700">
               <label className="flex items-center gap-2 cursor-pointer">
                 <input

@@ -25,7 +25,7 @@ export default function Admissions() {
   ];
 
   return (
-    <section id="admissions" className="bg-[#fafbfb] py-20">
+    <section id="admissions" className="bg-[#fafbfb] py-6">
       <div className="max-w-340 mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">
           {t("admissions.title")}

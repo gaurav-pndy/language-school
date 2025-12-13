@@ -27,7 +27,7 @@ export default function SuccessStories() {
     t(`testimonials.items.${id}`, { returnObjects: true });
 
   return (
-    <section id="testimonials" className="bg-white py-20">
+    <section id="testimonials" className="bg-white py-6">
       <div className="max-w-340 mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-3 text-slate-900">
           {t("testimonials.title")}

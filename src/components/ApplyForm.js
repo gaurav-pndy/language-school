@@ -3,13 +3,14 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "react-i18next";
 import "@/utils/i18n";
-import { PhoneInput } from "react-international-phone";
-import "react-international-phone/style.css";
+
+import PhoneInput from "react-phone-number-input";
+
 import Select from "react-select";
-import countryList from "react-select-country-list";
+import countries from "@/utils/countryNames";
 
 export default function ApplyForm() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const [form, setForm] = useState({
     firstName: "",
@@ -25,13 +26,32 @@ export default function ApplyForm() {
     message: "",
   });
 
-  const countryOptions = useMemo(
-    () =>
-      countryList()
-        .getData()
-        .map((c) => ({ value: c.label, label: c.label })),
-    []
-  );
+  const countryOptions = useMemo(() => {
+    const lang = i18n.language === "ru" ? "ru" : "en";
+    const names = countries.getNames(lang, { select: "official" });
+
+    return Object.entries(names).map(([code, name]) => ({
+      value: code,
+      label: name,
+    }));
+  }, [i18n.language]);
+
+  const selectedCountry =
+    form.country && countryOptions.find((c) => c.value === form.country);
+
+  const phoneLabels = useMemo(() => {
+    const lang = i18n.language === "ru" ? "ru" : "en";
+    const names = countries.getNames(lang, { select: "official" });
+
+    // react-phone-number-input expects a dictionary:
+    // { US: "United States", RU: "Россия", ... }
+    const dict = {};
+    Object.keys(names).forEach((code) => {
+      dict[code] = names[code];
+    });
+
+    return dict;
+  }, [i18n.language]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -39,18 +59,17 @@ export default function ApplyForm() {
   };
 
   const handleCheckboxChange = (name) => (e) => {
-    const { checked } = e.target;
-    setForm((prev) => ({ ...prev, [name]: checked }));
+    setForm((prev) => ({ ...prev, [name]: e.target.checked }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form submitted", form);
+    console.log("Form submitted:", form);
   };
 
-  const selectedCountry =
-    form.country && countryOptions.find((c) => c.value === form.country);
-
+  // ------------------------
+  // UI Rendering
+  // ------------------------
   return (
     <section id="contact">
       <div className="max-w-340 mx-auto px-4">
@@ -63,6 +82,7 @@ export default function ApplyForm() {
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* First Name */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("contactForm.firstName")}
@@ -72,11 +92,12 @@ export default function ApplyForm() {
                 name="firstName"
                 value={form.firstName}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2"
                 required
               />
             </div>
 
+            {/* Last Name */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("contactForm.lastName")}
@@ -86,11 +107,12 @@ export default function ApplyForm() {
                 name="lastName"
                 value={form.lastName}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2"
                 required
               />
             </div>
 
+            {/* Middle Name */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("contactForm.middleName")}
@@ -100,10 +122,11 @@ export default function ApplyForm() {
                 name="middleName"
                 value={form.middleName}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2"
               />
             </div>
 
+            {/* Email */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("applyForm.email")}
@@ -113,22 +136,30 @@ export default function ApplyForm() {
                 name="email"
                 value={form.email}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2"
                 required
               />
             </div>
 
-            <div className="apply-form-phone">
-              <label className="block font-semibold text-slate-800 mb-1">
+            {/* Phone Input */}
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("contactForm.phone")}
               </label>
-              <PhoneInput
-                defaultCountry="ru"
-                value={form.phone}
-                onChange={(phone) => setForm((prev) => ({ ...prev, phone }))}
-                className="rounded-xl  border border-gray-300 bg-white w-full"
-                inputClassName="!bg-transparent !border-none !w-full !px-3 overflow-hidden! !py-5 focus:!outline-none "
-              />
+
+              <div className="phone-input-wrapper w-full">
+                <PhoneInput
+                  international
+                  defaultCountry="RU"
+                  value={form.phone}
+                  onChange={(phone) => setForm((prev) => ({ ...prev, phone }))}
+                  labels={phoneLabels}
+                  countryCallingCodeEditable={false}
+                  className="phone-input"
+                />
+              </div>
+
+              {/* Contact preferences */}
               <div className="mt-2 flex flex-wrap gap-4 text-xs text-slate-700">
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
@@ -139,6 +170,7 @@ export default function ApplyForm() {
                   />
                   <span>{t("contactForm.whatsapp")}</span>
                 </label>
+
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="checkbox"
@@ -148,6 +180,7 @@ export default function ApplyForm() {
                   />
                   <span>{t("contactForm.telegram")}</span>
                 </label>
+
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input
                     type="checkbox"
@@ -160,14 +193,15 @@ export default function ApplyForm() {
               </div>
             </div>
 
-            {/* Country dropdown using react-select-country-list */}
+            {/* Country Select */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("applyForm.country")}
               </label>
+
               <Select
                 options={countryOptions}
-                value={selectedCountry || null}
+                value={selectedCountry}
                 onChange={(option) =>
                   setForm((prev) => ({
                     ...prev,
@@ -176,19 +210,10 @@ export default function ApplyForm() {
                 }
                 placeholder={t("applyForm.selectCountry")}
                 className="text-sm"
-                styles={{
-                  control: (base) => ({
-                    ...base,
-                    borderRadius: 12,
-                    borderColor: "#d1d5db",
-                    minHeight: "2.5rem",
-                    boxShadow: "none",
-                    "&:hover": { borderColor: "#fb7185" },
-                  }),
-                }}
               />
             </div>
 
+            {/* Program */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("applyForm.interestedIn")}
@@ -197,39 +222,33 @@ export default function ApplyForm() {
                 name="program"
                 value={form.program}
                 onChange={handleChange}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 bg-white focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 bg-white"
               >
                 <option value="">{t("applyForm.selectProgram")}</option>
-                <option value="intensive">
-                  {t("applyForm.programs.intensive")}
+                <option value="6-months-course">
+                  {t("applyForm.programs.option1")}
                 </option>
-                <option value="evening">
-                  {t("applyForm.programs.evening")}
-                </option>
-                <option value="online">{t("applyForm.programs.online")}</option>
-                <option value="private">
-                  {t("applyForm.programs.private")}
-                </option>
-                <option value="school">{t("applyForm.programs.school")}</option>
               </select>
             </div>
 
+            {/* Message */}
             <div>
               <label className="block text-sm font-medium text-slate-700 mb-1">
                 {t("applyForm.message")}
               </label>
               <textarea
                 name="message"
+                rows={4}
                 value={form.message}
                 onChange={handleChange}
-                rows={4}
-                className="w-full rounded-xl border border-gray-300 px-3 py-2 resize-none focus:outline-none focus:ring-2 focus:ring-red-400"
+                className="w-full rounded-xl border border-gray-300 px-3 py-2 resize-none"
               />
             </div>
 
+            {/* Submit */}
             <button
               type="submit"
-              className="w-full rounded-xl bg-[#e45944] hover:bg-[#d94c2e] text-white font-semibold py-3.5 cursor-pointer text-sm shadow-md transition-all duration-300"
+              className="w-full rounded-xl bg-[#e45944] hover:bg-[#d94c2e] text-white font-semibold py-3.5 text-sm shadow-md transition-all"
             >
               {t("applyForm.sendRequest")}
             </button>
