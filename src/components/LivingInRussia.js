@@ -38,7 +38,7 @@ export default function LivingInRussia() {
               key={tab.key}
               onClick={() => setActive(i)}
               type="button"
-              className={`px-6 cursor-pointer text-xs md:text-sm py-2 rounded-xl font-medium outline-none transition ${
+              className={`px-6 cursor-pointer text-sm py-2 rounded-xl font-medium outline-none transition ${
                 active === i
                   ? "bg-white shadow text-slate-900"
                   : "text-gray-600"
