@@ -58,9 +58,10 @@ export default function FloatingCta() {
   return (
     <div className="fixed right-4 bottom-4 z-40 bg-white rounded-lg border border-[#e45944] shadow-lg">
       {/* Text bubble */}
-      <div className="   px-4 pt-2 text-xs md:text-sm font-medium text-center max-w-68">
-        {t("floatingCta.text")}
-      </div>
+      <div
+        className="   px-4 pt-2 text-xs md:text-sm font-medium text-center max-w-68"
+        dangerouslySetInnerHTML={{ __html: t("floatingCta.text") }}
+      ></div>
 
       {/* Button block */}
       <div className="rounded-lg   p-2 flex flex-col items-stretch gap-2 s">

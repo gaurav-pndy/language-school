@@ -79,46 +79,68 @@
     "subtitle": "Experienced, certified instructors passionate about teaching Russian",
     "list": [
       {
-        "name": "Elena Petrova",
-        "role": "Lead Instructor",
-        "experience": "12 years of experience",
-        "bio": "PhD in Russian Philology. Specializes in intensive programs and exam preparation. Former lecturer at Moscow State University.",
-        "tags": ["Grammar", "TORFL Prep", "Academic Russian"],
+        "name": "Ekaterina Kornakova",
+        "location": "RUDN University",
+        "experience": "10 years of experience",
+        "bio": "Experienced Russian teacher with over 10 years teaching experience, teaches all levels. Specializes in academic and professional success, helping students enter Russian universities through communicative lessons that build real-life confidence. Also an author of many Russian textbooks",
+        "tags": ["Communicative approach"],
         "image": "/teachers/1.jpg"
       },
       {
-        "name": "Dmitri Sokolov",
-        "role": "Senior Teacher",
-        "experience": "15 years of experience",
-        "bio": "Master's in Russian Literature. Expert in conversation practice and cultural immersion. Published author on language pedagogy.",
-        "tags": ["Conversation", "Literature", "Business Russian"],
+        "name": "Elizaveta Sorokina",
+        "location": "Higher School of Economics",
+        "experience": "3 years of experience",
+        "bio": "Dynamic Russian teacher with 3 years of experience, teaches A1-B2 levels. Focuses on early active expression through active dialogue, games, reading, and practical grammar/vocabulary exercises. Greatest achievement: creating motivating lessons that energize students",
+        "tags": ["Active dialogue", "Play-based learning"],
         "image": "/teachers/2.jpg"
       },
       {
-        "name": "Anna Volkova",
-        "role": "Online Program Director",
-        "experience": "8 years of experience",
-        "bio": "Certified TEFL/TESOL instructor. Specializes in online teaching methodology and beginner-level instruction.",
-        "tags": ["Beginners", "Online Teaching", "Phonetics"],
+        "name": "Marina Bykova",
+        "location": "Mirzo Ulugbek National University of Uzbekistan",
+        "experience": "15 years of experience",
+        "bio": "Teaches Russian at all levels, helping students overcome barriers and spark lasting interest in Russian culture. Communicative, immersionbased approach uses dialogues, discussions, projects, and interactive methods to master language and context",
+        "tags": ["Immersion-based approach"],
         "image": "/teachers/3.jpg"
       }
     ]
   },
 
-   "testimonials": {
-    "title": "Student Success Stories",
+  "testimonials": {
+    "title": "Student success stories",
     "subtitle": "Hear from our international students",
-    "empty": "Testimonials will appear here soon.",
     "learnMore": "Learn more",
     "items": {
-      "thevarasa-sabilshan": {
+      "thevarasa": {
         "name": "Thevarasa Sabilshan",
         "country": "Sri Lanka",
         "status": "Current student",
-        "program": "Russian for university studies and future",
-        "duration": "Studying with us for 1–3 months",
-        "studyTime": "Studies 2–3 hours a day",
-        "review": "The most useful part of the course for me is the speaking practice. The teachers are very friendly and helpful, and they explain new material clearly and at a comfortable pace. I always feel supported and relaxed during the lessons. For me the best method is active conversation, and the course keeps a good balance between speaking, grammar, vocabulary, listening and reading. I feel that my Russian has improved significantly in a short time."
+        "goal": "Main goal: improve speaking skills to build future career",
+        "photo": "/students/thevarasa.jpg",
+        "review": "I am currently studying Russian for my university studies and future career, and my experience with this course has been excellent. I have been studying here for three months, around three hours a day, and my Russian has improved significantly, especially my speaking skills. <br/><br/> The speaking practice is the most valuable part of the course for me. The lessons are well balanced, and the teachers are friendly, supportive, and explain everything clearly at the right pace.I feel comfortable during classes and can now communicate confidently with Russians. <br/><br/> The course exceeded my expectations in every way. Communication with the school is clear and efficient, the learning platform is excellent, and the classroom environment is comfortable and welcoming. Overall, this program has been a great step toward my academic and professional goals."
+      },
+      "akil": {
+        "name": "Akil Vaibhav",
+        "country": "India",
+        "status": "Current student",
+        "goal": "Main goal: prepare for a medical residency in Russia",
+        "photo": "/students/akil.jpg",
+        "review": "As a medical student planning to do my residency in Russia, I needed a Russian course that was practical, focused, and effective — and this course delivered. In just a few months my Russian has improved significantly, especially my speaking skills. I can now hold proper conversations, which I couldn’t do before. <br/><br/> I really enjoy the small class sizes, which allow for more personalized lessons and meaningful interaction with the teachers. They explain new material clearly, keep the pace engaging, and create a supportive, comfortable environment where I feel confident to participate. <br/><br/> The course is perfectly balanced between speaking, grammar, vocabulary, listening, and reading, and the lesson materials, platform, and homework are very helpful. The school is easy to find, the classrooms are comfortable and clean, and I feel safe and part of a supportive learning community. <br/><br/> This program has exceeded my expectations and has been an essential step toward my academic and professional goals in medicine."
+      },
+      "pavan": {
+        "name": "Pavan Kumar Rajaguru",
+        "country": "Canada",
+        "status": "Current student",
+        "goal": "Main goal: become comfortable living and communicating in Russia",
+        "photo": "/students/pavan.jpg",
+        "review": "I am a working professional in the business field, and my goal was to become comfortable living and communicating in Russia. After studying for three months and dedicating more than three hours a day, I can confidently say the course exceeded my expectations. <br/><br/> The interactive lessons, strong focus on speaking practice, and variety of teaching styles from different teachers made learning both effective and engaging. The teachers explained new material clearly and at the right pace, and I always felt supported and comfortable during essons. <br/><br/> My Russian has improved significantly, especially speaking and reading. I can now form basic sentences, interact with public employees, and feel confident going out on my own using Russian. The classes have been extremely useful in daily life and at work, and the supportive learning environment made a real difference. <br/><br/> Overall, the course is well structured, practical, and focused on student needs. I highly recommend it to anyone looking to build real confidence using Russian in everyday life."
+      },
+      "ramaiah": {
+        "name": "Ramaiah Ganesan Tamizhinya",
+        "country": "India",
+        "status": "Current student",
+        "goal": "Main goal: use Russian confidently in university and daily life",
+        "photo": "/students/ramaiah.jpg",
+        "review": "I am a medical student, and my main goal for learning Russian was to use it confidently in university and daily life. Even within a short period of study, the course made a noticeable difference in my ability to communicate. <br/><br/> The strongest part of the program was the focus on conversational skills. Speaking practice, role playing, and group discussions helped me build confidence and actively use Russian instead of just memorizing rules. The interactive lessons and opportunities to practice with native speakers made learning engaging and enjoyable. <br/><br/> I feel that my Russian has improved significantly, especially in speaking, vocabulary, and grammar. I am now more comfortable using grammatical cases and expressing myself in conversations. The teachers explained new material clearly, maintained a good pace, and created a supportive and comfortable learning environment. <br/><br/> The course created a motivating and welcoming atmosphere that made learning Russian feel natural and practical. The classes were well organized, the environment was comfortable, and the strong sense of community encouraged regular speaking and steady progress. I would highly recommend this program to anyone looking for a supportive and effective way to learn Russian."
       }
     }
   },
@@ -127,31 +149,26 @@
     "title": "Admissions & Registration",
     "subtitle": "Simple enrollment process — start learning Russian in 3 clear steps",
     "step": "Step",
-    "steps": {
-      "choose": {
-        "title": "Choose Your Course",
-        "points": [
-          "Browse our programs and select the course that matches your goals and schedule."
-        ]
-      },
-      "form": {
-        "title": "Complete the Application Form",
-        "points": [
-          "Fill out our application form with your personal and educational information.",
-          "This helps us choose the most suitable program for you and align it with your selected course."
-        ]
-      },
-      "test": {
-        "title": "Free Placement Test",
-        "points": [
-          "Take our online placement test to determine your current Russian level (A0–B1).",
-          "After completing the test, you will see: “Thank you for taking our test. Your placement level is ___. We suggest you take our paid consultation to accurately confirm this level.”",
-          "Final confirmation of your level after completing both steps is mandatory."
-        ]
-      }
+    "step1": {
+      "badge": "6 month course is available now",
+      "title": "Choose Your Course",
+      "firstLine": "Browse our programs and select the course that matches your goals and schedule.",
+      "secondLine": ""
+    },
+    "step2": {
+      "badge": "",
+      "title": "Complete the Application Form",
+      "firstLine": "Fill out the form with your personal details and education information.",
+      "secondLine": "Our manager will contact you and clarify all the details within 24 hours."
+    },
+    "step3": {
+      "badge": "Format: multiple choice",
+      "title": "Free Placement Test",
+      "firstLine": "Take our online placement test to determine your current Russian level (A0–B1).",
+      "secondLine": "This will help us place you in a group that matches your language level."
     }
   },
-  
+
   "living": {
     "title": "Useful Information",
     "subtitle": "Everything you need to know about Russia as an international student in Moscow",
@@ -332,7 +349,7 @@
   },
 
   "floatingCta": {
-    "text": "Our next intensive course begins on 03.03.2026. Reserve your place today.",
+    "text": "The nearest start date for the group is February 2, 2026 <br/>Reserve your place today!",
     "apply": "Apply now",
     "contact": "Contact us"
   }

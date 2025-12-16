@@ -31,21 +31,19 @@ export default function Teachers() {
                   className="object-cover w-full h-full"
                 />
               </div>
-              <h3 className="text-2xl font-semibold text-slate-900 mb-1">
+              <h3 className="text-2xl font-semibold text-slate-900 ">
                 {teacher.name}
               </h3>
-              <div className="font-medium text-[#E87667] mb-1 text-sm">
-                {teacher.role}
-              </div>
-              <div className="text-gray-500 text-sm mb-6">
+              <div className=" text-gray-600  text-sm">{teacher.location}</div>
+              <div className="text-gray-500 text-sm mb-4">
                 {teacher.experience}
               </div>
-              <p className="text-gray-600 mb-4">{teacher.bio}</p>
+              <p className=" mb-4">{teacher.bio}</p>
               <div className="flex flex-wrap gap-2 mt-auto">
                 {teacher.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="bg-[#f3f4f7] rounded-full px-3 py-1 text-xs font-medium text-gray-800"
+                    className="bg-[#f3f4f7] rounded-full px-3 py-1 text-sm font-medium text-gray-800"
                   >
                     {tag}
                   </span>
