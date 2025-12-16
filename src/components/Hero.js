@@ -71,7 +71,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-340 w-full mx-auto px-4 py-12 text-left">
-        <h1 className="text-white text-5xl md:text-6xl font-bold mb-6 max-w-3xl">
+        <h1 className="text-white text-4xl md:text-6xl font-bold mb-6 max-w-3xl">
           {t("hero.title")}
         </h1>
         <p className="text-xl text-white/90 mb-10 max-w-2xl">
