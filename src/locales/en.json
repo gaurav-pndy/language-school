@@ -64,12 +64,14 @@
   },
   "whyUs": {
     "title": "Why Us?",
-    "points": [
-      "Personalized Russian program: Tailored to your goals, schedule, and profession, with small groups that ensure every student receives attention and feedback.",
-      "Supportive international community: Connect with peers and access guidance from experienced experts.",
-      "Professional connections: Benefit from strong links with the Russian medical field and other professional networks.",
-      "Practical language skills: Learn Russian for study, work, and everyday life, not just theory."
-    ]
+    "h1": "Supportive international community:",
+    "p1": "Connect with peers and access guidance from experienced experts.",
+    "h2": "Personalized Russian program:",
+    "p2": "Tailored to your goals, schedule, and profession, with small groups that ensure every student receives attention and feedback.",
+    "h3": "Professional connections:",
+    "p3": "Benefit from strong links with the Russian medical field and other professional networks.",
+    "h4": "Practical language skills:",
+    "p4": "Learn Russian for study, work, and everyday life, not just theory."
   },
   
   "teachers": {
@@ -124,6 +126,7 @@
   "admissions": {
     "title": "Admissions & Registration",
     "subtitle": "Simple enrollment process — start learning Russian in 3 clear steps",
+    "step": "Step",
     "steps": {
       "choose": {
         "title": "Choose Your Course",
@@ -146,6 +149,92 @@
           "Final confirmation of your level after completing both steps is mandatory."
         ]
       }
+    }
+  },
+  
+  "living": {
+    "title": "Useful Information",
+    "subtitle": "Everything you need to know about Russia as an international student in Moscow",
+    "tabs": {
+      "cost": "Cost of Living",
+      "city": "City Guide",
+      "safety": "Safety & Health"
+    },
+    "cost": {
+      "heading": "Monthly Living Costs in Moscow",
+      "subheading": "Approximate costs for international students (in euros)",
+      "items": {
+        "accommodation": {
+          "label": "Accommodation",
+          "value": "€200-400/month"
+        },
+        "food": {
+          "label": "Food & Groceries",
+          "value": "€150-250/month"
+        },
+        "transport": {
+          "label": "Transport (Metro pass)",
+          "value": "€30/month"
+        },
+        "entertainment": {
+          "label": "Entertainment",
+          "value": "€50-100/month"
+        }
+      },
+      "totalTitle": "Total estimated monthly cost:",
+      "totalValue": "€430 - €780",
+      "totalNote": "This makes Moscow one of the most affordable major cities in Europe for international students."
+    },
+    "city": {
+      "heading": "Moscow City Guide",
+      "subheading": "Must-see attractions and cultural highlights",
+      "places": {
+        "red": {
+          "title": "Red Square & Kremlin",
+          "desc": "Iconic historic center, UNESCO World Heritage site"
+        },
+        "tretyakov": {
+          "title": "Tretyakov Gallery",
+          "desc": "World-class Russian art museum"
+        },
+        "bolshoi": {
+          "title": "Bolshoi Theatre",
+          "desc": "Historic opera and ballet performances"
+        },
+        "gorky": {
+          "title": "Gorky Park",
+          "desc": "Modern urban park with cultural events"
+        },
+        "arbat": {
+          "title": "Arbat Street",
+          "desc": "Historic pedestrian street with shops and cafes"
+        },
+        "metro": {
+          "title": "Moscow Metro",
+          "desc": "Architectural masterpiece underground"
+        }
+      },
+      "gettingAroundTitle": "Getting Around",
+      "gettingAroundText": "Moscow has one of the world's most efficient metro systems. A monthly pass costs just €30 and covers unlimited rides. The metro is fast, clean, and many stations are architectural marvels worth visiting.",
+      "locationTitle": "Location Benefits",
+      "locationText": "Our school is located in central Moscow near Pushkinskaya/Tverskaya metro stations, placing you within minutes of major attractions, restaurants, and cultural venues."
+    },
+    "safety": {
+      "heading": "Safety & Health Information",
+      "subheading": "Stay safe and healthy during your stay in Russia",
+      "tipsTitle": "Safety Tips",
+      "tips": [
+        "Always carry your passport and migration card.",
+        "Register your address within 7 days of arrival (we help with this).",
+        "Learn basic Russian phrases for emergencies.",
+        "Save emergency numbers: Police (102), Ambulance (103), Fire (101).",
+        "Use official taxis or ride-sharing apps (Yandex Taxi, Uber).",
+        "Moscow is generally safe, but be aware of your surroundings in crowded places."
+      ],
+      "healthTitle": "Health Insurance & Medical Care",
+      "insurance": "All international students must have medical insurance valid in Russia. We recommend policies starting from €20/month.",
+      "facilities": "Moscow has excellent private and public hospitals. We'll provide you with a list of English-speaking doctors and clinics near the school.",
+      "emergency": "Emergency numbers:\n• Ambulance: 103 or 112\n• 24/7 School Support: Available for emergencies"
     }
   },
 

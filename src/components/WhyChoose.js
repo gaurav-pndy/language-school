@@ -1,45 +1,57 @@
-// components/WhyChoose.js
 "use client";
 
-import Image from "next/image";
+import { LuGlobe, LuUsers } from "react-icons/lu";
+import { IoBookOutline } from "react-icons/io5";
 import { FiCheckCircle } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
-import "@/utils/i18n";
 
 export default function WhyChoose() {
   const { t } = useTranslation();
-  const points = t("whyUs.points", { returnObjects: true });
+  const features = [
+    {
+      title: t("whyUs.h1"),
+      description: t("whyUs.p1"),
+      icon: <LuUsers className="text-2xl text-[#f6573f]" />,
+    },
+    {
+      title: t("whyUs.h2"),
+      description: t("whyUs.p2"),
+      icon: <IoBookOutline className="text-2xl text-[#f6573f]" />,
+    },
+    {
+      title: t("whyUs.h3"),
+      description: t("whyUs.p3"),
+      icon: <LuGlobe className="text-2xl text-[#f6573f]" />,
+    },
+    {
+      title: t("whyUs.h4"),
+      description: t("whyUs.p4"),
+      icon: <FiCheckCircle className="text-2xl text-[#f6573f]" />,
+    },
+  ];
 
   return (
     <section className="bg-white py-6" id="why-us">
       <div className="max-w-340 mx-auto px-4">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
-          {/* Left: text and bullets */}
-          <div>
-            <h3 className="text-3xl md:text-4xl font-bold mb-4 text-slate-900">
-              {t("whyUs.title")}
-            </h3>
+        <h2 className="text-4xl font-bold text-center mb-10 text-slate-900">
+          {t("whyUs.title")}
+        </h2>
 
-            <ul className="space-y-3">
-              {points.map((item, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <FiCheckCircle className="mt-1.5 shrink-0 text-[#f6573f]" />
-                  <p className="text-gray-700 md:text-lg">{item}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Right: image */}
-          <div className="relative w-full h-[260px] md:h-[360px] lg:h-96">
-            <Image
-              src="/why-us.avif"
-              alt={t("whyUs.title")}
-              fill
-              className="object-cover rounded-2xl shadow-lg"
-              priority
-            />
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {features.map((feature) => (
+            <div
+              key={feature.title}
+              className="bg-white border border-gray-200 rounded-xl shadow-sm p-8 flex flex-col items-start transition hover:shadow-lg"
+            >
+              <span className="mb-6 flex items-center justify-center w-12 h-12 rounded-lg bg-[#fceeec]">
+                {feature.icon}
+              </span>
+              <h3 className="text-xl font-semibold mb-3 text-slate-900">
+                {feature.title}
+              </h3>
+              <p className="text-gray-500">{feature.description}</p>
+            </div>
+          ))}
         </div>
       </div>
     </section>

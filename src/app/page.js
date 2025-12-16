@@ -29,11 +29,12 @@ export default function HomePage() {
       {/* <StudentServices /> */}
 
       <Admissions />
+      <LivingInRussia />
       <FAQ />
       <Address />
       <ContactUs />
       {/* <VisaGuide /> */}
-      {/* <LivingInRussia /> */}
+
       {/* <LearningResources /> */}
       {/* <BlogNews /> */}
     </div>
