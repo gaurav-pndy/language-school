@@ -126,7 +126,7 @@ export default function SuccessStories() {
               })}
             </Swiper>
 
-            <div className="flex  gap-2 mt-6">
+            <div className="flex  gap-2 mt-2">
               <button
                 type="button"
                 className="testimonials-prev cursor-pointer w-12 h-12 rounded-full border-2 border-gray-300 bg-[#f1f3f6] flex items-center justify-center text-3xl text-slate-700 hover:bg-gray-100"

@@ -245,6 +245,78 @@ export default function Header() {
                 &times;
               </button>
               <ul className="flex flex-col gap-6">
+                <div className="flex items-center gap-2 justify-between min-w-0">
+                  <div className="flex items-center gap-4">
+                    <a
+                      href="https://wa.me/74951234567"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-500 text-2xl hover:scale-125 transition-all duration-300"
+                      aria-label="WhatsApp"
+                    >
+                      <FaWhatsapp />
+                    </a>
+                    <a
+                      href="https://t.me/medclinic"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-sky-500 text-2xl hover:scale-125 transition-all duration-300"
+                      aria-label="Telegram"
+                    >
+                      <FaTelegramPlane />
+                    </a>
+                    <a
+                      href=""
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-500 text-lg xl:text-2xl hover:scale-125 transition-all duration-300"
+                      aria-label="Max"
+                    >
+                      <img src="/max.png" alt="" className="w-6" />
+                    </a>
+                  </div>
+
+                  <div
+                    className="relative md:ml-2 flex gap-1 md:gap-2 items-center"
+                    ref={dropdownRef}
+                  >
+                    <FaGlobe className="text-2xl text-brand1" />
+                    <div className="relative">
+                      <button
+                        type="button"
+                        className="cursor-pointer border font-semibold base-text px-2 hover:bg-brand1/10 transition-all duration-300 py-1.5 rounded-lg flex items-center gap-2"
+                        onClick={() => setDropdownOpen(!dropdownOpen)}
+                      >
+                        <img
+                          src={currentLang.flag}
+                          alt="Flag"
+                          className="w-3 xl:w-4 h-3 xl:h-4"
+                        />
+                        {currentLang.label}
+                        <IoIosArrowDown className="text-sm" />
+                      </button>
+
+                      {dropdownOpen && (
+                        <ul className="absolute md:top-9 w-full bg-white border border-[#002379] rounded-lg shadow-md mt-1 right-0 z-10 overflow-hidden">
+                          {languages.map((lang) => (
+                            <li
+                              key={lang.code}
+                              className="flex items-center gap-2 px-2 md:px-3 py-1 hover:bg-gray-200 cursor-pointer base-text"
+                              onClick={() => changeLanguage(lang.code)}
+                            >
+                              <img
+                                src={lang.flag}
+                                className="w-3 md:w-4 h-3 md:h-4"
+                                alt={lang.code}
+                              />
+                              {lang.label}
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </div>
+                  </div>
+                </div>
                 {navLinks.map((link) => (
                   <li key={link.key}>
                     <a
