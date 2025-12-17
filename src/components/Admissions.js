@@ -12,17 +12,17 @@ export default function Admissions() {
   const steps = [
     {
       key: "step1",
-      icon: <IoBookOutline className="text-2xl" />,
+      icon: <IoBookOutline strokeWidth={3} className="text-2xl" />,
       stepNumber: "1",
     },
     {
       key: "step2",
-      icon: <IoDocumentTextOutline className="text-2xl" />,
+      icon: <IoDocumentTextOutline strokeWidth={3} className="text-2xl" />,
       stepNumber: "2",
     },
     {
       key: "step3",
-      icon: <LuClipboardCheck className="text-2xl" />,
+      icon: <LuClipboardCheck strokeWidth={1.5} className="text-2xl" />,
       stepNumber: "3",
     },
   ];

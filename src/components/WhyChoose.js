@@ -17,7 +17,7 @@ export default function WhyChoose() {
       title: t("whyUs.h2"),
       description: t("whyUs.p2"),
       icon: (
-        <IoBookOutline strokeWidth={3} className="text-2xl text-[#f6573f]" />
+        <IoBookOutline strokeWidth={4} className="text-2xl text-[#f6573f]" />
       ),
     },
     {
