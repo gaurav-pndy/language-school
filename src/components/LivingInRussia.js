@@ -73,17 +73,17 @@ function CostTab() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <CostItem
-          icon={<HiOutlineLocationMarker />}
+          icon={<HiOutlineLocationMarker strokeWidth={1.5} />}
           label={t("living.cost.items.accommodation.label")}
           value={t("living.cost.items.accommodation.value")}
         />
         <CostItem
-          icon={<PiForkKnife />}
+          icon={<PiForkKnife strokeWidth={1} />}
           label={t("living.cost.items.food.label")}
           value={t("living.cost.items.food.value")}
         />
         <CostItem
-          icon={<PiTrain />}
+          icon={<PiTrain strokeWidth={1} />}
           label={t("living.cost.items.transport.label")}
           value={t("living.cost.items.transport.value")}
         />
@@ -112,7 +112,7 @@ function CostTab() {
 function CostItem({ icon, label, value }) {
   return (
     <div className="flex items-center p-4 rounded-xl bg-[#f7f8f9]">
-      <span className="mr-4 flex items-center justify-center w-14 h-14 rounded-xl shrink-0 bg-[#fceeec] text-3xl text-[#f6573f]">
+      <span className="mr-4 flex items-center justify-center w-14 h-14 rounded-lg shrink-0 bg-[#fceeec] text-3xl text-[#f6573f]">
         {icon}
       </span>
       <div>

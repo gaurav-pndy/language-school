@@ -39,7 +39,7 @@ const initialTestimonials = [
 export default function SuccessStories() {
   const [testimonials] = useState(initialTestimonials);
   const [active, setActive] = useState(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const getItem = (id) =>
     t(`testimonials.items.${id}`, { returnObjects: true });
@@ -67,7 +67,7 @@ export default function SuccessStories() {
               spaceBetween={24}
               slidesPerView={1}
               breakpoints={{
-                768: { slidesPerView: 2 },
+                1020: { slidesPerView: 2 },
                 1200: { slidesPerView: 3 },
               }}
             >
@@ -76,7 +76,13 @@ export default function SuccessStories() {
                 return (
                   <SwiperSlide key={tst.id}>
                     <article className="h-full bg-white border border-gray-200 rounded-2xl shadow-sm px-6 py-5 flex flex-col">
-                      <div className="flex items-center gap-4 mb-4">
+                      <div
+                        className={`flex items-center gap-4 mb-4 ${
+                          i18n.language == "en"
+                            ? "min-h-36 md:min-h-16 lg:min-h-32 xl:min-h-32"
+                            : "min-h-40 md:min-h-16 lg:min-h-28 xl:min-h-36"
+                        }`}
+                      >
                         <img
                           src={tst.avatar}
                           alt={item.name}

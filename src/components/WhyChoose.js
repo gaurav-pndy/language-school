@@ -6,27 +6,31 @@ import { FiCheckCircle } from "react-icons/fi";
 import { useTranslation } from "react-i18next";
 
 export default function WhyChoose() {
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const features = [
     {
       title: t("whyUs.h1"),
       description: t("whyUs.p1"),
-      icon: <LuUsers className="text-2xl text-[#f6573f]" />,
+      icon: <LuUsers strokeWidth={2} className="text-2xl  text-[#f6573f]" />,
     },
     {
       title: t("whyUs.h2"),
       description: t("whyUs.p2"),
-      icon: <IoBookOutline className="text-2xl text-[#f6573f]" />,
+      icon: (
+        <IoBookOutline strokeWidth={3} className="text-2xl text-[#f6573f]" />
+      ),
     },
     {
       title: t("whyUs.h3"),
       description: t("whyUs.p3"),
-      icon: <LuGlobe className="text-2xl text-[#f6573f]" />,
+      icon: <LuGlobe strokeWidth={1.5} className="text-2xl text-[#f6573f]" />,
     },
     {
       title: t("whyUs.h4"),
       description: t("whyUs.p4"),
-      icon: <FiCheckCircle className="text-2xl text-[#f6573f]" />,
+      icon: (
+        <FiCheckCircle strokeWidth={2} className="text-2xl text-[#f6573f]" />
+      ),
     },
   ];
 
@@ -43,10 +47,16 @@ export default function WhyChoose() {
               key={feature.title}
               className="bg-white border border-gray-200 rounded-xl shadow-sm p-8 flex flex-col items-start transition hover:shadow-lg"
             >
-              <span className="mb-6 flex items-center justify-center w-12 h-12 rounded-lg bg-[#fceeec]">
+              <span className="mb-6 flex items-center justify-center w-12 h-12 rounded-lg font-bold bg-[#fceeec]">
                 {feature.icon}
               </span>
-              <h3 className="text-xl font-semibold mb-3 text-slate-900">
+              <h3
+                className={`text-xl font-semibold ${
+                  i18n.language == "en"
+                    ? "md:min-h-16 lg:min-h-22 xl:min-h-16"
+                    : "md:min-h-16 lg:min-h-28 xl:min-h-22"
+                } mb-3 text-slate-900`}
+              >
                 {feature.title}
               </h3>
               <p className="text-gray-500">{feature.description}</p>
