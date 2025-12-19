@@ -35,7 +35,7 @@ export default function WhyChoose() {
   ];
 
   return (
-    <section className="bg-white py-6" id="why-us">
+    <section className="bg-white py-6 pt-12" id="why-us">
       <div className="max-w-340 mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-10 text-slate-900">
           {t("whyUs.title")}

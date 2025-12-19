@@ -9,6 +9,7 @@ import FAQ from "@/components/FAQ";
 import Hero from "@/components/Hero";
 import LearningResources from "@/components/LearningResources";
 import LivingInRussia from "@/components/LivingInRussia";
+import ProgramModules from "@/components/ProgramModules";
 import Programs from "@/components/Programs";
 import StudentServices from "@/components/StudentServices";
 import SuccessStories from "@/components/SuccessStories";
@@ -20,10 +21,10 @@ export default function HomePage() {
   return (
     <div>
       <Hero />
-
-      <Programs />
-      <CourseStructure />
       <WhyChoose />
+      <ProgramModules />
+      <Programs />
+
       <Teachers />
       <SuccessStories />
       {/* <StudentServices /> */}

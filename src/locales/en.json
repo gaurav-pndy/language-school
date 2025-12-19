@@ -39,6 +39,8 @@
     "applyNow": "Apply Now"
   },
 
+
+
   "applyForm": {
     "title": "Request Information",
     "subtitle": "Fill out the form and we'll get back to you within 24 hours",
@@ -57,6 +59,64 @@
       "option1": "6 Month Course"
     },
     "sendRequest": "Send Request"
+  },
+
+  "modules": {
+    "title": "What our program includes",
+    "subtitle": "This intensive course runs from February to July (6 months) and takes you from A0 to B1 level",
+   
+    "whatWeStudy": "What we will study:",
+    "items": [
+      {
+        "id": "a1",
+        "tabLabel": "Module 1",
+        "title": "Elementary level (A1)",
+        "meta": "8 weeks of practice · 15 hours per week",
+        "bullets": [
+          "Alphabet and reading",
+          "Simple phrases for introductions and greetings",
+          "Numbers, dates, time",
+          "Shop, café, transport — basic situations",
+          "How to talk about yourself, your family and your country"
+        ],
+        "note": "After each module, an exam is held to confirm successful mastery of the language level.",
+        "resultTitle": "Module result:",
+        "resultText": "You understand and use basic phrases, can read in Russian and maintain a simple dialogue",
+        "image": "/modules/1.jpg"
+      },
+      {
+        "id": "a2",
+        "tabLabel": "Module 2",
+        "title": "Basic level (A2)",
+        "meta": "8 weeks of practice · 15 hours per week",
+        "bullets": [
+          "Expanding vocabulary for study and everyday life​",
+          "Basic grammatical structures​",
+          "Describing people, places, events​",
+          "Communication at university, in clinics, and public places​",
+          "Working through real-life scenarios in Russia​"
+        ],
+        "note": "After each module, an exam is held to confirm successful mastery of the language level",
+        "resultTitle": "Module result:",
+        "resultText": "You communicate confidently in typical everyday situations, understand Russian in everyday contexts, and are ready for more complex topics",
+        "image": "/modules/1.jpg"
+      },
+      {
+        "id": "b1",
+        "tabLabel": "Module 3",
+        "title": "First certification level (B1)",
+        "meta": "8 weeks of practice · 15 hours per week",
+        "bullets": [
+          "Academic and professional contexts (medicine, study, everyday work)​",
+          "Extended monologues and discussions​",
+          "Reading and analysis of adapted texts​"
+        ],
+        "note": "After each module, an exam is held to confirm successful mastery of the language level",
+        "resultTitle": "Module result:",
+        "resultText": "Readiness to enter bachelor’s or master’s programs and command of Russian at a level sufficient for study and everyday life in Russia",
+        "image": "/modules/1.jpg"
+      }
+    ]
   },
     "courseStructure": {
     "title": "Course Structure",

@@ -14,7 +14,7 @@ export default function Programs() {
   const bullets = t("programs.sixMonthBullets", { returnObjects: true });
 
   return (
-    <section id="programs" className="bg-gray-50 py-6 pt-12">
+    <section id="programs" className="bg-gray-50 py-6 ">
       <div className="max-w-340 mx-auto px-4">
         <h2 className="text-4xl font-bold text-center mb-4 text-slate-900">
           {t("programs.title")}
