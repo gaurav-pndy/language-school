@@ -409,7 +409,7 @@
   },
 
   "floatingCta": {
-    "text": "The nearest start date for the group is February 2, 2026 <br/>Reserve your place today!",
+    "text": "The nearest start date for the group is<br/> February 2, 2026 <br/>Reserve your place today!",
     "apply": "Apply now",
     "contact": "Contact us"
   }
