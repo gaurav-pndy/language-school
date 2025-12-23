@@ -78,7 +78,7 @@ export default function Admissions() {
 
                 {/* Right icon */}
                 <div className="ml-4 flex items-center">
-                  <div className="w-11 h-11 md:w-12 md:h-12 rounded-2xl bg-[#fceeec] flex items-center justify-center text-[#f6573f]">
+                  <div className="w-11 h-11 md:w-12 md:h-12 rounded-lg bg-[#fceeec] flex items-center justify-center text-[#f6573f]">
                     {step.icon}
                   </div>
                 </div>

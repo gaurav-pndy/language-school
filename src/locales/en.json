@@ -238,29 +238,48 @@
       "safety": "Safety & Health"
     },
     "cost": {
-      "heading": "Monthly Living Costs in Moscow",
-      "subheading": "Approximate costs for international students (in euros)",
-      "items": {
+      "heading": "Monthly living expenses in Moscow",
+      "subheading": "Approximate expenses for international students (not including entertainment)",
+      "blocks": {
         "accommodation": {
-          "label": "Accommodation",
-          "value": "€200-400/month"
+          "title": "Accommodation: ",
+          "price": "260–770$",
+          "text": [
+            "Room in an apartment: 320–450$",
+            "Studio apartment: 580–770$",
+            "Hostel: 260–320$",
+            "Hotel: 385–580$"
+          ]
         },
-        "food": {
-          "label": "Food & Groceries",
-          "value": "€150-250/month"
+        "utilities": {
+          "title": "Utilities: ",
+          "price": "13-40$",
+          "text": "Electricity and water costs (when living in an apartment or room)."
+        },
+        "mobile": {
+          "title": "Mobile service and internet: ",
+          "price": "15$",
+          "text": "It is most convenient to use a plan with unlimited internet."
         },
         "transport": {
-          "label": "Transport (Metro pass)",
-          "value": "€30/month"
+          "title": "Transport: ",
+          "price": "40$",
+          "text": "A single bus or metro ride costs 0.85$, but it is more economical to buy a monthly pass."
         },
-        "entertainment": {
-          "label": "Entertainment",
-          "value": "€50-100/month"
+        "groceries": {
+          "title": "Groceries:",
+          "price": "260–385$",
+          "text": "The cost of groceries depends on food preferences; for example, seafood is more expensive than chicken or meat."
         }
       },
-      "totalTitle": "Total estimated monthly cost:",
-      "totalValue": "€430 - €780",
-      "totalNote": "This makes Moscow one of the most affordable major cities in Europe for international students."
+      "total": {
+        "heading": "Total per month:",
+        "note": "Moscow remains one of the most affordable European capitals for students.",
+        "min": "Minimum: ",
+        "minPrice": "580$",
+        "max": "Maximum: ",
+        "maxPrice": "1250$"
+      }
     },
     "city": {
       "heading": "Moscow City Guide",

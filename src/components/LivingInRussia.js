@@ -7,9 +7,14 @@ import { FiDollarSign } from "react-icons/fi";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { PiForkKnife, PiTrain } from "react-icons/pi";
 import { BsSuitcaseLg } from "react-icons/bs";
-import { FaBuildingColumns } from "react-icons/fa6";
+import { FaBuildingColumns, FaCar } from "react-icons/fa6";
 import { LuShield } from "react-icons/lu";
-import { FaRegHeart } from "react-icons/fa";
+import { FaMobileAlt, FaRegHeart } from "react-icons/fa";
+import { IoHomeOutline } from "react-icons/io5";
+import {
+  MdOutlineElectricalServices,
+  MdOutlineLocalGroceryStore,
+} from "react-icons/md";
 
 export default function LivingInRussia() {
   const { t } = useTranslation();
@@ -67,42 +72,138 @@ function CostTab() {
         <FiDollarSign className="mr-2 text-3xl text-[#f6573f]" />
         {t("living.cost.heading")}
       </h3>
-      <div className="text-gray-500 text-sm mb-6">
-        {t("living.cost.subheading")}
-      </div>
+      <div className="text-gray-500  mb-6">{t("living.cost.subheading")}</div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <CostItem
-          icon={<HiOutlineLocationMarker strokeWidth={1.5} />}
-          label={t("living.cost.items.accommodation.label")}
-          value={t("living.cost.items.accommodation.value")}
-        />
-        <CostItem
-          icon={<PiForkKnife strokeWidth={1} />}
-          label={t("living.cost.items.food.label")}
-          value={t("living.cost.items.food.value")}
-        />
-        <CostItem
-          icon={<PiTrain strokeWidth={1} />}
-          label={t("living.cost.items.transport.label")}
-          value={t("living.cost.items.transport.value")}
-        />
-        <CostItem
-          icon={<BsSuitcaseLg />}
-          label={t("living.cost.items.entertainment.label")}
-          value={t("living.cost.items.entertainment.value")}
-        />
-      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2  gap-4">
+        {/* Left column */}
+        <div className="grid items-stretch space-y-4">
+          {/* Accommodation */}
+          <div className="rounded-xl flex gap-2 justify-between bg-[#f7f8fa] p-4 ">
+            <div>
+              <div className=" text-lg items-center mb-2">
+                <span className="font-semibold text-slate-900">
+                  {t("living.cost.blocks.accommodation.title")}
+                </span>
+                <span className="text-[#e45944] font-semibold">
+                  {t("living.cost.blocks.accommodation.price")}
+                </span>
+              </div>
+              <ul className=" list-disc  text-gray-600 list-inside">
+                {t("living.cost.blocks.accommodation.text", {
+                  returnObjects: true,
+                }).map((str, i) => (
+                  <li key={i}>{str}</li>
+                ))}
+              </ul>
+            </div>
 
-      <div className="bg-[#fceeec] rounded-xl p-4 mt-6">
-        <h6 className="font-semibold text-slate-800 mb-2">
-          {t("living.cost.totalTitle")}
-        </h6>
-        <p className="font-bold text-2xl text-[#f6573f] mb-2">
-          {t("living.cost.totalValue")}
-        </p>
-        <div className="text-gray-500 text-sm">
-          {t("living.cost.totalNote")}
+            <span className="mb-6 flex items-center justify-center w-12 h-12 rounded-lg font-bold bg-[#fceeec] shrink-0 text-[#f6573f] text-2xl">
+              <IoHomeOutline />
+            </span>
+          </div>
+
+          {/* Utilities */}
+          <div className="rounded-xl flex gap-2 justify-between bg-[#f7f8fa] p-4">
+            <div>
+              <div className=" text-lg items-center mb-2">
+                <span className="font-semibold text-slate-900">
+                  {t("living.cost.blocks.utilities.title")}
+                </span>
+                <span className="text-[#e45944] font-semibold">
+                  {t("living.cost.blocks.utilities.price")}
+                </span>
+              </div>
+              <p className=" text-gray-600 whitespace-pre-line">
+                {t("living.cost.blocks.utilities.text")}
+              </p>
+            </div>
+            <span className="mb-6 flex items-center shrink-0 justify-center w-12 h-12 rounded-lg font-bold bg-[#fceeec] text-[#f6573f] text-2xl">
+              <MdOutlineElectricalServices />
+            </span>
+          </div>
+
+          {/* Mobile */}
+          <div className="rounded-xl flex gap-2 justify-between bg-[#f7f8fa] p-4">
+            <div>
+              <div className=" text-lg items-center mb-2">
+                <span className="font-semibold text-slate-900">
+                  {t("living.cost.blocks.mobile.title")}
+                </span>
+                <span className="text-[#e45944] font-semibold">
+                  {t("living.cost.blocks.mobile.price")}
+                </span>
+              </div>
+              <p className=" text-gray-600 whitespace-pre-line">
+                {t("living.cost.blocks.mobile.text")}
+              </p>
+            </div>
+            <span className="mb-6 flex items-center justify-center w-12 h-12 rounded-lg font-bold bg-[#fceeec] shrink-0 text-[#f6573f] text-2xl">
+              <FaMobileAlt />
+            </span>
+          </div>
+        </div>
+
+        {/* Right column */}
+        <div className="grid items-stretch space-y-4">
+          {/* Transport */}
+          <div className="rounded-xl flex gap-2 justify-between bg-[#f7f8fa] p-4">
+            <div>
+              <div className="text-lg items-center mb-2">
+                <span className="font-semibold text-slate-900">
+                  {t("living.cost.blocks.transport.title")}
+                </span>
+                <span className="text-[#e45944] font-semibold">
+                  {t("living.cost.blocks.transport.price")}
+                </span>
+              </div>
+              <p className=" text-gray-600 whitespace-pre-line">
+                {t("living.cost.blocks.transport.text")}
+              </p>
+            </div>
+            <span className="mb-6 flex items-center shrink-0 justify-center w-12 h-12 rounded-lg font-bold bg-[#fceeec] text-[#f6573f] text-2xl">
+              <FaCar />
+            </span>
+          </div>
+
+          {/* Groceries */}
+          <div className="rounded-xl flex gap-2 justify-between bg-[#f7f8fa] p-4">
+            <div>
+              <div className=" text-lg items-center mb-2">
+                <span className="font-semibold text-slate-900">
+                  {t("living.cost.blocks.groceries.title")}
+                </span>{" "}
+                <span className="text-[#e45944] font-semibold">
+                  {t("living.cost.blocks.groceries.price")}
+                </span>
+              </div>
+              <p className=" text-gray-600 whitespace-pre-line">
+                {t("living.cost.blocks.groceries.text")}
+              </p>
+            </div>
+            <span className="mb-6 flex items-center shrink-0 justify-center w-12 h-12 rounded-lg font-bold bg-[#fceeec] text-[#f6573f] text-2xl">
+              <MdOutlineLocalGroceryStore />
+            </span>
+          </div>
+
+          {/* Total panel */}
+          <div className="rounded-xl  bg-[#274268] text-white p-4 space-y-2">
+            <p className="font-semibold ">{t("living.cost.total.heading")}</p>
+            <p className="whitespace-pre-line">{t("living.cost.total.note")}</p>
+            <div className="flex flex-wrap gap-2 mt-1">
+              <p className="inline-flex items-center px-3 py-1.5 gap-1 rounded-lg bg-white text-slate-900 font-semibold">
+                <span>{t("living.cost.total.min")} </span>{" "}
+                <span className="text-[#e45944]">
+                  {t("living.cost.total.minPrice")}
+                </span>
+              </p>
+              <p className="inline-flex items-center px-3 py-1.5 gap-1 rounded-lg bg-white text-slate-900 font-semibold">
+                <span>{t("living.cost.total.max")} </span>{" "}
+                <span className="text-[#e45944]">
+                  {t("living.cost.total.maxPrice")}
+                </span>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -134,9 +235,7 @@ function CityTab() {
         <FaBuildingColumns className="mr-2 text-3xl text-[#f6573f]" />
         {t("living.city.heading")}
       </h3>
-      <div className="text-gray-500 text-sm mb-6">
-        {t("living.city.subheading")}
-      </div>
+      <div className="text-gray-500  mb-6">{t("living.city.subheading")}</div>
 
       <div className="grid sm:grid-cols-2 gap-4 mb-6">
         {places.map((key) => (
@@ -184,9 +283,7 @@ function SafetyTab() {
         <LuShield className="mr-2 text-3xl text-[#f6573f]" />
         {t("living.safety.heading")}
       </h3>
-      <div className="text-gray-500 text-sm mb-6">
-        {t("living.safety.subheading")}
-      </div>
+      <div className="text-gray-500 mb-6">{t("living.safety.subheading")}</div>
 
       <div className="mb-6">
         <h3 className="text-lg font-semibold mb-2 text-slate-900 flex items-center">
