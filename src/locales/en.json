@@ -245,30 +245,30 @@
           "title": "Accommodation: ",
           "price": "260–770$",
           "text": [
-            "Room in an apartment: 320–450$",
-            "Studio apartment: 580–770$",
-            "Hostel: 260–320$",
-            "Hotel: 385–580$"
+            "Room in an apartment: $320–450",
+            "Studio apartment: $580–770",
+            "Hostel: $260–320",
+            "Hotel: $385–580"
           ]
         },
         "utilities": {
           "title": "Utilities: ",
-          "price": "13-40$",
+          "price": "$13-40",
           "text": "Electricity and water costs (when living in an apartment or room)."
         },
         "mobile": {
           "title": "Mobile service and internet: ",
-          "price": "15$",
+          "price": "$10-15",
           "text": "It is most convenient to use a plan with unlimited internet."
         },
         "transport": {
           "title": "Transport: ",
-          "price": "40$",
+          "price": "$40",
           "text": "A single bus or metro ride costs 0.85$, but it is more economical to buy a monthly pass."
         },
         "groceries": {
           "title": "Groceries:",
-          "price": "260–385$",
+          "price": "$260–385",
           "text": "The cost of groceries depends on food preferences; for example, seafood is more expensive than chicken or meat."
         }
       },
@@ -276,9 +276,9 @@
         "heading": "Total per month:",
         "note": "Moscow remains one of the most affordable European capitals for students.",
         "min": "Minimum: ",
-        "minPrice": "580$",
+        "minPrice": "$580",
         "max": "Maximum: ",
-        "maxPrice": "1250$"
+        "maxPrice": "$1250"
       }
     },
     "city": {
