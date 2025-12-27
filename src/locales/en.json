@@ -38,9 +38,6 @@
     ],
     "applyNow": "Apply Now"
   },
-
-
-
   "applyForm": {
     "title": "Request Information",
     "subtitle": "Fill out the form and we'll get back to you within 24 hours",
@@ -60,11 +57,9 @@
     },
     "sendRequest": "Send Request"
   },
-
   "modules": {
     "title": "What our program includes",
     "subtitle": "This intensive course runs from February to July (6 months) and takes you from A0 to B1 level",
-   
     "whatWeStudy": "What we will study:",
     "items": [
       {
@@ -118,7 +113,7 @@
       }
     ]
   },
-    "courseStructure": {
+  "courseStructure": {
     "title": "Course Structure",
     "description": "This intensive course runs from February to July (6 months) and takes you from A0 to A2. It includes 15 hours of classes per week, held four times a week. Each day consists of 3 periods, with each period lasting 1 hour 20 minutes."
   },
@@ -133,7 +128,6 @@
     "h4": "Practical language skills:",
     "p4": "Learn Russian for study, work, and everyday life, not just theory."
   },
-  
   "teachers": {
     "title": "Meet Our Teachers",
     "subtitle": "Experienced, certified instructors passionate about teaching Russian",
@@ -143,7 +137,9 @@
         "location": "RUDN University",
         "experience": "10 years of experience",
         "bio": "Experienced Russian teacher with over 10 years teaching experience, teaches all levels. Specializes in academic and professional success, helping students enter Russian universities through communicative lessons that build real-life confidence. Also an author of many Russian textbooks",
-        "tags": ["Communicative approach"],
+        "tags": [
+          "Communicative approach"
+        ],
         "image": "/teachers/1.jpg"
       },
       {
@@ -151,7 +147,10 @@
         "location": "Higher School of Economics",
         "experience": "3 years of experience",
         "bio": "Dynamic Russian teacher with 3 years of experience, teaches A1-B2 levels. Focuses on early active expression through active dialogue, games, reading, and practical grammar/vocabulary exercises. Greatest achievement: creating motivating lessons that energize students",
-        "tags": ["Active dialogue", "Play-based learning"],
+        "tags": [
+          "Active dialogue",
+          "Play-based learning"
+        ],
         "image": "/teachers/2.jpg"
       },
       {
@@ -159,12 +158,13 @@
         "location": "Mirzo Ulugbek National University of Uzbekistan",
         "experience": "15 years of experience",
         "bio": "Teaches Russian at all levels, helping students overcome barriers and spark lasting interest in Russian culture. Communicative, immersionbased approach uses dialogues, discussions, projects, and interactive methods to master language and context",
-        "tags": ["Immersion-based approach"],
+        "tags": [
+          "Immersion-based approach"
+        ],
         "image": "/teachers/3.jpg"
       }
     ]
   },
-
   "testimonials": {
     "title": "Student success stories",
     "subtitle": "Hear from our international students",
@@ -204,7 +204,6 @@
       }
     }
   },
-  
   "admissions": {
     "title": "Admissions & Registration",
     "subtitle": "Simple enrollment process — start learning Russian in 3 clear steps",
@@ -228,7 +227,6 @@
       "secondLine": "This will help us place you in a group that matches your language level."
     }
   },
-
   "living": {
     "title": "Useful Information",
     "subtitle": "Everything you need to know about Russia as an international student in Moscow",
@@ -243,7 +241,7 @@
       "blocks": {
         "accommodation": {
           "title": "Accommodation: ",
-          "price": "260–770$",
+          "price": "$260–770",
           "text": [
             "Room in an apartment: $320–450",
             "Studio apartment: $580–770",
@@ -333,7 +331,6 @@
       "emergency": "Emergency numbers:\n• Ambulance: 103 or 112\n• 24/7 School Support: Available for emergencies"
     }
   },
-
   "faq": {
     "title": "Frequently Asked Questions",
     "subtitle": "Quick answers to common questions about studying Russian with us",
@@ -382,8 +379,7 @@
       }
     ]
   },
-
-   "address": {
+  "address": {
     "title": "Our Location",
     "addressTitle": "Address",
     "clinicName": "RusLanguage",
@@ -391,7 +387,6 @@
     "phoneTitle": "Phone",
     "phoneDisplay": "+1 (234) 567-89-00"
   },
-  
   "contactForm": {
     "title": "Contact Us",
     "subtitle": "Have questions about our Russian programs or admissions? Send us a message and we'll get back to you shortly.",
@@ -407,7 +402,6 @@
     "max": "Max",
     "send": "Send message"
   },
-
   "footer": {
     "navigation": "Fast Links",
     "legalDocs": "Legal Documents",
@@ -426,12 +420,9 @@
     },
     "copyright": "© RusLanguage School. All rights reserved."
   },
-
   "floatingCta": {
     "text": "The nearest start date for the group is February 2, 2026 <br/>Reserve your place today!",
     "apply": "Apply now",
     "contact": "Contact us"
   }
-
-
 }
